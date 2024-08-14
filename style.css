@@ -1,0 +1,277 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+/* 
+nav{
+  display: flex;
+  background: midnightblue;
+  color: #fff;
+  padding: .6rem;
+  justify-content: space-between;
+}
+nav h1{
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.nav-lists{
+  display: flex;
+  float: right;
+}
+.nav-lists li{
+  list-style: none;
+  margin: 0 .5rem;
+  color: #fff;
+  font-size: .7em;
+}
+.nav-lists a{
+  float: right;
+} */
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+header{
+  position: fixed;
+  top:0; left:0;
+  width:100%;
+  background:black;
+  padding:.9rem 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  border-bottom: 1px solid white;
+}
+
+header .logo{
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: serif;
+}
+
+header .logo span{
+  color: rgb(145, 18, 145);
+
+}
+
+header .navbar a{
+  font-size: 1.7rem;
+  margin-left: 2rem;
+  color:white;
+}
+
+
+header input{
+  display: none;
+}
+
+header label{
+  font-size: 5rem;
+  color: rgb(145, 18, 145);
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.first{
+  text-align: center;
+  margin: 8rem;
+  font-size: 2rem;
+}
+
+.side-divs{
+  display: flex;
+  justify-content: center;
+}
+.side-div{
+  background: black;
+  padding: .5rem;
+  width: 50%;
+  margin: .2rem;
+  text-align: center;
+  color: white
+
+}
+
+.side-div h3{
+  font-size: 2.5rem;
+  margin: 1.5rem;
+  color: white;
+}
+.side-div h3 span{
+  letter-spacing: .5rem;
+   color: rgb(145, 18, 145);
+}
+.side-div p{
+  font-size: 1.2rem;
+}
+.side-divs img{
+  width: 15rem;
+}
+
+.input-section{
+  margin: 2rem 1rem;
+  display: flex;
+  border: 1px solid rgb(145, 18, 145);
+  padding: .3rem;
+  border-radius: 10px;
+  justify-content: space-between;
+}
+
+.input-section input{
+  outline: 0;
+  border: 0;
+  padding: .3rem;
+  border-radius: 10px 0 0 10px;
+  font-size: 1.5rem;
+  width: 70%;
+}
+.input-section button{
+  outline: 0;
+  border: 0;
+  padding: .3rem;
+  font-size: 1.5rem;
+  border-radius: 0 10px 10px 0;
+  background: rgb(145, 18, 145);
+  color: white;
+}
+
+
+
+.blog-wrapper{
+  text-align: center;
+  background:black;
+  padding:  10%;
+  color: white;
+  height: 100%;
+  width: 50%;
+}
+.blog-body{
+  margin: 2rem;
+  justify-content: center;
+  /* background: red; */
+  padding: 1.5rem;
+}
+.blog-body textarea{
+  outline: 0;
+  border: 0;
+  padding: .5rem;
+  height: 10em;
+  font-size: 1.2rem;
+  border-bottom: 1px solid ;
+  margin-bottom: -6px;
+
+}
+.blog-body button{
+  padding: .3rem;
+  outline: 0;
+  border: 0;
+  margin: 1rem;
+  background: rgb(145, 18, 145);
+  color: white;
+  font-weight: 600;
+}
+
+.container-flex{
+  display: flex;
+  height: 100vh;
+}
+
+.posted-article{
+  height: 100%;
+  padding:  10%;
+  color: black;
+}
+
+.posted-article h2{
+  font-size: 2rem;
+  color: rgb(145, 18, 145);
+}
+.new-div{
+  background: black;
+  padding: .5rem;
+  font-size: 1.2rem;
+  color: white;
+  margin: 2rem;
+  border-radius:0 0 5px 5px;
+}
+.delete-btn{
+  border: 0;
+  padding: .3rem;
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  display: block;
+  background: rgb(145, 18, 145);
+  color: white;
+  border-radius: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1200px){
+    
+  html{
+      font-size: 55%;
+  }
+
+}
+
+
+@media (max-width:768px){
+
+  header label{
+      visibility: visible;
+      opacity: 1;
+  }
+
+  header .navbar{
+      position: absolute;
+      top:100%; left: 0;
+      width:100%;
+      padding:1rem 2rem;
+      border-top: .1rem solid rgba(0,0,0,.2);
+      box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+      transform-origin: top;
+      transform: scaleY(0);
+      opacity: 0;
+      transition: .2s linear;
+      background: rgb(2, 2, 44);
+
+   }
+  
+  header .navbar a{
+      display: block;
+      margin:2rem 0;
+      color: white;
+      font-size: 2rem;
+  }
+
+  header input:checked ~ .navbar{
+      transform: scaleY(1);
+      opacity: 1;
+  }
+
+  header input:checked ~ label::before{
+      content:'\f00d';
+  }
+}
